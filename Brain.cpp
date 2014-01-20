@@ -1,3 +1,5 @@
+#include <SoftwareSerial.h>
+
 #if defined(ARDUINO) && ARDUINO >= 100
   #include "Arduino.h"
 #else
@@ -6,7 +8,7 @@
 
 #include "Brain.h"
 
-Brain::Brain(HardwareSerial &_brainSerial) {
+Brain::Brain(SoftwareSerial &_brainSerial) {
 	brainSerial = &_brainSerial;
 	
 	// Keep the rest of the initialization process in a separate method in case
